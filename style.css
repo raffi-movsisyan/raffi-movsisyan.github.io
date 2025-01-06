@@ -1,0 +1,121 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: monospace;
+}
+
+
+body{
+    background-color: white;
+}
+
+.header{
+    display: flex;
+    gap: 50px;
+    color: rgb(0, 0, 0);
+    text-decoration: none;
+    justify-content: center;
+    margin-top: 40px;
+}
+
+.header a{
+    color: black;
+    text-decoration: none;
+    font-size: 20px;
+}
+
+
+.header a:hover{
+    text-decoration: underline;
+}
+
+.info{
+    display: flex;
+    flex-direction: column;
+    justify-self: center;
+    margin-top: 210px;
+    font-size: 40px;
+}
+
+button{
+    cursor: pointer;
+}
+
+.hireme{
+    background-color: rgb(4, 32, 108);
+    border: none;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    color: white;
+    transition: 200ms ease-out;
+}
+
+.hireme:hover{
+    background-color: white;
+    border: 2px solid rgb(4, 32, 108);
+    color: black;
+}
+
+
+.contactme{
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 120px;
+    height: 50px;
+    border-radius: 10px;
+    border: 2px solid rgb(4, 32, 108);
+    transition: 200ms ease-out;
+}
+
+
+.contactme span{
+    display: none;
+    font-size: 15px;
+}
+
+.contactme:hover{
+    margin-left: 10px;
+}
+
+.contactme:hover span{
+    display: inline;
+}
+
+#about{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+}
+
+#about h2{
+    font-size: 30px;
+}
+
+#about p{
+    font-size: 20px;
+    margin-top: 20px;
+    padding: 0 70px 0 70px;
+    max-width: 900px;
+}
+
+.copyright{
+    margin: 50px 0 ;
+    display: flex;
+    justify-content: center;
+    font-size: 20px;
+}
+
+
+a svg{
+    width: 30px;
+    height: 30px;
+    margin-left: 50px;
+}
+
+.github{
+    display: flex;
+    gap: 20px;
+}
