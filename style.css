@@ -1,16 +1,15 @@
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: monospace;
 }
 
-
-body{
+body {
     background-color: white;
 }
 
-.header{
+.header {
     display: flex;
     gap: 50px;
     color: rgb(0, 0, 0);
@@ -19,18 +18,19 @@ body{
     margin-top: 40px;
 }
 
-.header a{
+.header a {
     color: black;
     text-decoration: none;
     font-size: 20px;
+    display: flex;
+    align-items: center;
 }
 
-
-.header a:hover{
+.header a:hover {
     text-decoration: underline;
 }
 
-.info{
+.info {
     display: flex;
     flex-direction: column;
     justify-self: center;
@@ -38,11 +38,11 @@ body{
     font-size: 40px;
 }
 
-button{
+button {
     cursor: pointer;
 }
 
-.hireme{
+.hireme {
     background-color: rgb(4, 32, 108);
     border: none;
     width: 120px;
@@ -52,14 +52,13 @@ button{
     transition: 200ms ease-out;
 }
 
-.hireme:hover{
+.hireme:hover {
     background-color: white;
     border: 2px solid rgb(4, 32, 108);
     color: black;
 }
 
-
-.contactme{
+.contactme {
     background-color: rgb(255, 255, 255);
     border: none;
     width: 120px;
@@ -69,53 +68,162 @@ button{
     transition: 200ms ease-out;
 }
 
-
-.contactme span{
+.contactme span {
     display: none;
     font-size: 15px;
 }
 
-.contactme:hover{
+.contactme:hover {
     margin-left: 10px;
 }
 
-.contactme:hover span{
+.contactme:hover span {
     display: inline;
 }
 
-#about{
+#about {
     display: flex;
     flex-direction: column;
     align-items: center;
     margin-top: 100px;
 }
 
-#about h2{
+#about h2 {
     font-size: 30px;
 }
 
-#about p{
+#about p {
     font-size: 20px;
     margin-top: 20px;
     padding: 0 70px 0 70px;
     max-width: 900px;
 }
 
-.copyright{
-    margin: 50px 0 ;
+.copyright {
+    margin: 50px 0;
     display: flex;
     justify-content: center;
     font-size: 20px;
 }
 
-
-a svg{
+a svg {
     width: 30px;
     height: 30px;
     margin-left: 50px;
 }
 
-.github{
+.github {
     display: flex;
     gap: 20px;
+}
+
+/* Media Queries for responsiveness */
+@media (max-width: 1200px) {
+    .header {
+        gap: 30px;
+    }
+
+    .info {
+        font-size: 35px;
+    }
+
+    .hireme, .contactme {
+        width: 100px;
+        height: 45px;
+    }
+
+    #about p {
+        padding: 0 50px;
+    }
+
+    .github svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    .about{
+        max-width: 1100px;
+    }
+
+    body{
+        gap: 20px;
+    }
+}
+
+@media (max-width: 768px) {
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .info {
+        font-size: 30px;
+        margin-top: 50px;
+    }
+
+    .hireme, .contactme {
+        width: 100%;
+        height: 50px;
+        margin-top: 10px;
+    }
+
+    #about {
+        padding: 0 20px;
+    }
+
+    #about p {
+        padding: 0;
+        font-size: 18px;
+    }
+
+    .copyright {
+        font-size: 16px;
+    }
+
+    a svg {
+        width: 25px;
+        height: 25px;
+    }
+
+    body{
+        padding: 20px;
+    }
+
+    .about{
+        max-width: 750px;
+    }
+}
+
+@media (max-width: 480px) {
+    .info {
+        font-size: 25px;
+        margin-top: 30px;
+    }
+
+    .hireme, .contactme {
+        width: 100%;
+        height: 45px;
+    }
+
+    #about p {
+        padding: 0 20px;
+        font-size: 16px;
+    }
+
+    .copyright {
+        font-size: 14px;
+    }
+
+    .github svg {
+        width: 20px;
+        height: 20px;
+    }
+
+    .body{
+        padding: 20px;
+    }
+
+    .about{
+        max-width: 470px;
+    }
 }
