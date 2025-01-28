@@ -1,0 +1,105 @@
+@mixin flexself {
+  display: flex;
+  justify-self: center;
+  align-self: center;
+}
+
+@keyframes spin {
+  0% {
+    box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.8),
+      0 0 100px 40px rgba(255, 255, 255, 0.6),
+      0 0 150px 60px rgba(255, 255, 255, 0.4),
+      0 0 200px 80px rgba(255, 255, 255, 0.2),
+      0 0 250px 100px rgba(255, 255, 255, 0.1);
+  }
+  50% {
+    box-shadow: 0 0 25px 10px rgba(255, 255, 255, 0.8),
+      0 0 50px 20px rgba(255, 255, 255, 0.6),
+      0 0 70px 30px rgba(255, 255, 255, 0.4),
+      0 0 100px 40px rgba(255, 255, 255, 0.2),
+      0 0 125px 50px rgba(255, 255, 255, 0.1);
+  }
+  100% {
+    box-shadow: 0 0 50px 20px rgba(255, 255, 255, 0.8),
+      0 0 100px 40px rgba(255, 255, 255, 0.6),
+      0 0 150px 60px rgba(255, 255, 255, 0.4),
+      0 0 200px 80px rgba(255, 255, 255, 0.2),
+      0 0 250px 100px rgba(255, 255, 255, 0.1);
+  }
+}
+
+body {
+  background-color: rgb(0, 0, 18);
+}
+
+#light {
+  @include flexself();
+  justify-content: center;
+  align-items: center;
+  margin-top: 300px;
+  border: 1px solid whitesmoke;
+  font-family: monospace;
+  font-size: 30px;
+  border-radius: 50%;
+  width: 200px;
+  height: 200px;
+  &:hover {
+    background-color: white;
+    cursor: pointer;
+    animation: spin 1500ms linear infinite;
+  }
+}
+
+@mixin size {
+  width: 50px;
+  height: 50px;
+}
+
+.l {
+  @include size();
+  cursor: pointer;
+}
+
+.colors {
+  display: flex;
+  gap: 20px;
+  @include flexself();
+  margin-top: 50px;
+}
+
+#zero {
+  background-color: white;
+}
+
+#first {
+  background-color: #cdb4db;
+}
+
+#second {
+  background-color: #ffafcc;
+}
+
+#third {
+  background-color: #a2d2ff;
+}
+
+label {
+  color: #fff;
+  font-size: 24px;
+}
+
+#inp {
+  @include flexself();
+  margin-top: 20px;
+  width: 90px;
+  height: 50px;
+  border: #fff 2px solid;
+}
+
+
+.custom{
+  margin-top: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
